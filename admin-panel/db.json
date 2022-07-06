@@ -1,0 +1,38 @@
+ 
+ {
+  
+  "posts": [
+    {
+      "id": 1,
+      "title": "admin activity one",
+      "publishedAt": "10-2-2022"
+    },
+    {
+      "id": 2,
+      "title": "admin activity two",
+      "publishedAt": "4-2-2022"
+    },
+    {
+      "id": 3,
+      "title": "admin activity three",
+      "publishedAt": "8-2-2022"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "pritom",
+      "email": "pritom@gmail.com"
+    },
+    {
+      "id": 2,
+      "name": "sagor",
+      "email": "sagor@gmail.com"
+    },
+    {
+      "id": 3,
+      "name": "akash",
+      "email": "akash@gmail.com"
+    }
+  ]
+}
