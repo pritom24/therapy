@@ -1,6 +1,8 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 import{ } from '@fortawesome/free-solid-svg-icons'
-import {FaFacebook, FaInstagram, FaGithub, FaLinkedin} from 'react-icons/fa'
+import {FaFacebook, FaInstagram, FaGithub, FaLinkedin, FaPhone} from 'react-icons/fa'
+import Accordion from './Accordion'
 
 function Footer() {
   return <>
@@ -19,9 +21,10 @@ function Footer() {
         <div className='footer-col'>
             <h4>get help</h4>
             <ul>
-                <li><a href="">FAQ</a></li>
-                <li><a href="">order status</a></li>
-                <li><a href="">payemnt options</a></li>
+                <li><Link to={'/faq'}><a href="">faqs</a> </Link></li>
+                <li><Link to={''}><a href="">programs</a> </Link></li>
+                <li><Link to={''}><a href="">payment options</a> </Link></li>
+                
             </ul>
         </div>
         <div className='footer-col'>

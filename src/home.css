@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Yesteryear&display=swap');
+
+.common{
+    font-family: 'Yesteryear', cursive;
+    color: black;
+}
+.video-back{
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    opacity: 0.8;
+}

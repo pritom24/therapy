@@ -1,0 +1,507 @@
+.style-img {
+	width: 100%;	
+}
+.blogh1 {
+	font-family: 'Vollkorn SC', serif;
+	border-bottom: dotted 2px black;
+	display: inline-block;
+	margin: 100px 0 50px;
+}
+/* 
+==================================================
+Base Styles
+
+font-family: 'Montserrat', sans-serif;
+font-family: 'Merriweather Sans', sans-serif;
+================================================== 
+*/
+
+*,
+*:before,
+*:after {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+*:focus {
+	outline: none;
+}
+
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: "Merriweather Sans", sans-serif;
+	letter-spacing: 1px;
+}
+
+ul {
+	list-style: none;
+}
+
+li {
+	display: inline;
+}
+
+a {
+	text-decoration: none;
+	color: #222;
+}
+
+.svg-inline--fa {
+	font-size: 1.2em;
+}
+
+.mybtn {
+	background: transparent;
+	border: 2px solid #fff;
+	color: #fff;
+	display: inline-block;
+	margin-top: 10px;
+	padding: 12px 20px;
+	border-radius: 0px;
+	text-align: center;
+	transition: all 0.35s;
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: 1px;
+}
+
+.mybtn:hover {
+	background: #e91e63;
+	border: 2px solid #e91e63;
+	color: #fff;
+}
+
+.myrow-uneven {
+	max-width: 1460px;
+	margin: 0 auto;
+}
+
+/* 
+==================================================
+Navigation menus
+================================================== 
+*/
+
+/* **********
+STANDARD MENU 
+********** */
+
+.standard-nav {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	z-index: 9999;
+	display: flex;
+	justify-content: space-between;
+	background: #000;
+	padding: 2px;
+}
+
+.links {
+	padding: 12px 2px;
+}
+
+.links a {
+	padding: 0px 12px;
+	color: #eee;
+	transition: all 0.35s;
+	display: inline-block;
+}
+
+.links a:hover {
+	transform: scale(1.1);
+	color: #e91e63;
+}
+
+.brand {
+	color: #eee;
+	padding: 12px 15px;
+	display: inline-block;
+}
+
+/* 
+==================================================
+Hero
+================================================== 
+*/
+
+.top-intro {
+	text-align: center;
+}
+
+.top-intro h1 {
+	font-size: 3em;
+	line-height: 1.2em;
+	text-transform: uppercase;
+}
+
+.top-intro p {
+	font-size: 1.2em;
+}
+
+.accent {
+	background: #000;
+	color: #fff;
+	padding: 5px 10px;
+}
+
+#home .myrow {
+	margin-bottom: 0;
+}
+
+.hero .myrow {
+	background: transparent;
+}
+
+.hero {
+	height: 768px;
+	background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+		url("https://images.unsplash.com/photo-1475695752828-6d2b0a83cf8a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1321&q=80")no-repeat
+			center;
+	background-size: cover;
+	display: flex;
+	align-items: center;
+	color: #fff;
+	padding: 40px;
+}
+
+.hero h1 {
+	font-size: 5em;
+	text-transform: uppercase;
+}
+
+.hero p {
+	font-size: 2em;
+}
+
+/* 
+==================================================
+Posts
+================================================== 
+*/
+
+.blog-header {
+	text-align: center;
+}
+
+.blog-header h2 {
+	text-transform: uppercase;
+}
+
+.date {
+	color: #aaa;
+}
+
+.likes,
+.replies {
+	padding: 10px 15px;
+	cursor: pointer;
+	transition: all 0.35s;
+}
+
+.likes {
+	border: 1px solid #b2b2b2;
+	background: transparent;
+	font-weight: bold;
+}
+
+.likes:hover {
+	border: 1px solid #b97fb8;
+	background: #b97fb8;
+	color: #fff;
+}
+
+.replies {
+	border: 1px solid #000;
+	background: #000;
+	color: #fff;
+}
+
+.replies:hover {
+	border: 1px solid #f1f1f1;
+	background: #b97fb8;
+	color: #000;
+}
+
+.count {
+	background: #b97fb8;
+	color: #fff;
+	padding: 5px;
+	margin-left: 15px;
+}
+
+.post-btm-bar {
+	display: flex;
+	justify-content: space-between;
+}
+
+/* 
+==================================================
+Sidebar
+================================================== 
+*/
+
+.profile .author {
+	padding: 0;
+}
+
+.abt {
+	padding: 10px 20px;
+	background: #000;
+	color: #fff;
+	margin-top: -7px;
+}
+
+.profile-title {
+}
+
+/************
+POPULAR POSTS
+************/
+
+.sidebar-header {
+	background: #b97fb8;
+	color: #fff;
+	padding: 1px 20px;
+}
+
+.p-img img {
+	width: 100%;
+	height: auto;
+}
+
+.p-img {
+	margin-right: 10px;
+	max-width: 100px;
+}
+
+.p-posts {
+	display: flex;
+	align-items: center;
+	transition: all 0.35s;
+	cursor: pointer;
+}
+
+.popular-posts .myrow {
+	margin-bottom: 0;
+	border-bottom: 1px solid #eee;
+}
+
+.p-posts:hover {
+	background: #f6f6f6 !important;
+	color: #000;
+}
+
+.popular-posts .myrow:last-child {
+	margin-bottom: 20px;
+	border: none;
+}
+
+.p-text h5 {
+	line-height: 0;
+}
+
+/************
+TAG CLOUD
+************/
+
+.tag {
+	display: inline-block;
+	background: #eee;
+	padding: 5px 10px;
+	font-size: 0.85em;
+	margin-bottom: 5px;
+	cursor: pointer;
+	transition: all 0.35s;
+}
+
+.tag:hover {
+	background: #000;
+	color: #fff;
+}
+
+/************
+SOCIAL FOLLOW
+************/
+
+.follow a {
+	transition: all 0.35s;
+	display: inline-block;
+	font-size: 1.2em;
+	padding: 2px;
+}
+
+.follow a:hover {
+	transform: scale(1.1);
+	color: #e91e63;
+}
+
+/************
+SUBSCRIBE
+************/
+
+.subscribe form input[type="submit"] {
+	background: #b97fb8;
+	border: none;
+	border-radius: 0px;
+	width: 100%;
+	padding: 10px;
+	color: #fff;
+	transition: all 0.35s;
+	cursor: pointer;
+	 -webkit-appearance: none;
+}
+
+.subscribe form input[type="submit"]:hover {
+	opacity: 0.5;
+}
+
+.subscribe form input[type="email"] {
+	width: 100%;
+	margin-bottom: 10px;
+	padding: 8px;
+	border: 1px solid #ccc;
+	border-radius: 0px;
+	 -webkit-appearance: none;
+}
+
+/* 
+==================================================
+Footer
+================================================== 
+*/
+
+
+
+/* 
+==================================================
+Grid Layout
+================================================== 
+*/
+
+.myrow {
+	display: flex;
+	margin: 0 0 30px 0;
+}
+
+.mycol {
+	padding: 20px;
+}
+
+.myrow-uneven .mycol {
+	background: #fff;
+	/* padding: 20px; */
+}
+
+.myrow-uneven {
+	padding: 30px;
+}
+
+.mycol-left {
+	margin-right: 15px;
+}
+
+.mycol-right {
+	margin-left: 15px;
+}
+
+.myrow .mycol {
+	-webkit-box-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+}
+
+.myrow-halves,
+.myrow-thirds,
+.myrow-fourths,
+.myrow-uneven {
+	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+}
+
+.myrow-uneven .mycol-left {
+	width: 70%;
+}
+
+.myrow-uneven .mycol-right {
+	width: 30%;
+}
+
+.myrow-halves .mycol {
+	width: 49%;
+	margin: 0 auto;
+}
+
+.myrow-thirds .mycol {
+	width: 32%;
+}
+
+.myrow-fourths .mycol {
+	width: 24%;
+}
+
+/* 
+==================================================
+Media Queries
+================================================== 
+*/
+
+@media (max-width: 970px) {
+	.myrow,
+	.myrow-halves,
+	.myrow-thirds,
+	.myrow-fourths,
+	.myrow-uneven {
+		display: block;
+	}
+
+	.myrow .mycol,
+	.myrow-halves .mycol,
+	.myrow-thirds .mycol,
+	.myrow-fourths .mycol,
+	.myrow-uneven .mycol-left,
+	.myrow-uneven .mycol-right {
+		width: 100%;
+		margin: 0 0 10px 0;
+	}
+}
+
+@media (max-width: 650px) {
+	.hero h1 {
+	font-size: 4em;
+	text-transform: uppercase;
+}
+
+.hero p {
+	font-size: 1.5em;
+}
+}
+
+@media (max-width: 550px) {
+	.hero h1 {
+	font-size: 4em;
+	text-transform: uppercase;
+		line-height: 1.2em;
+}
+
+.hero p {
+	font-size: 1.5em;
+	line-height: 0;
+}
+}
+
+@media(max-width: 480px) {
+	.top-intro h1 {
+		font-size: 2.5em;
+	}
+}
+
+

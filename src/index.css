@@ -1,21 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:ital,wght@1,900&family=Yesteryear&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Yesteryear&display=swap');
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "mulish", sans-serif;
+ 
+}
+body{
+  background-color: #f5f5f5;
 }
 
 #header{
   width: 100%;
-  height: 80vh;
-  margin-top: 70px;
+  height: 90vh;
+  margin-top: 0px;
+
 }
 #header h1 {
-  margin: 0 0 10px 0;
+  margin: 50px 50px 0px 0px;
   font-size: 48px;
   font-weight: 700;
-  color: black;
+  color: #fff;
 }
 #header .brand-name {
   color: #972853;
@@ -35,17 +42,47 @@
   font-size: 24px;
   animation-delay: 0.4s;
 }
+.homePage-title{
+  z-index: 5;
+  font-family: 'Poppins', sans-serif;
+    visibility: visible;
+    text-align: inherit;
+    margin-bottom: 1.2rem;
+    line-height: 100px;
+    letter-spacing: 0px;
+    font-weight: 700;
+    font-size: 100px;
+    border-color: rgb(99, 115, 117);
+    border-style: none;
+    
+    border-radius: 0px;
+    padding: 0px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    white-space: normal;
+    width: 866px;
+    height: auto;
+    min-height: 0px;
+    min-width: 0px;
+    max-height: none;
+    max-width: none;
+    opacity: 1;
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform-origin: 50% 50% 0px;
+}
 
-#header .btn-get-started{
-  font-size: 500;
+ .btn-get-started{
+  font-size: 50px;
   font-size: 16px;
+ 
   letter-spacing: 1px;
   display: inline-block;
   padding: 10px 30px;
   border-radius: 50px;
   transition: 0.5s;
-  color: #972853;
-  border: 2px solid #972853;
+  color: #fff;
+  background-color: rgb(248, 159, 115);
+  
   text-decoration: none;
   animation-delay: 0.6s;
 }
@@ -120,8 +157,11 @@ label{
   text-align: center;
 }
 .contact .content h2{
+  font-family: 'Yesteryear', cursive;
   font-size: 36px;
   font-weight: 500;
+  color: #b97fb8;
+  text-shadow: #972853;
 }
 .contact .content p{
  
@@ -145,13 +185,16 @@ label{
   position: relative;
   padding: 20px 0;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  
 }
 .conteiner .contactInfo .box .icon{
   min-width: 60px;
   height: 60px;
   display: flex;
   color: #fff;
-  background: rgba(20, 19, 19, 0.5);
+  background: #b97fb8;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
@@ -166,6 +209,7 @@ label{
 .conteiner .contactInfo .box .text h3{
 font-weight: 500;
 color: #0a0808d3;
+padding-top: 0.5rem;
 }
 .contactForm{
   width: 40%;
@@ -193,6 +237,7 @@ border: none;
 border-bottom: 2px solid #333;
 outline: none;
 resize: none;
+background-color: #f5f5f5;
 }
 .contactForm .inputBox span{
   position: absolute;
@@ -219,7 +264,7 @@ transform: translateY(-20px);
 }
 .contactForm .inputBox input[type="submit"]{
   width: 100px;
-  background: rgba(20, 19, 19, 0.5);
+  background: #b97fb8;
   color: #fff;
   border: none;
   cursor: pointer;
@@ -277,7 +322,7 @@ padding: 0 15px;
   position: absolute;
   left: 0;
   bottom: -10px;
-  background-color: #110f0fcb;
+  background-color: #b97fb8;
   height: 2px;
   box-sizing: border-box;
   width: 50px;
@@ -312,8 +357,8 @@ padding: 0 15px;
   transition: all 0.3s ease;
 }
 .footer-col .social-links a:hover{
-  color: #d3d3d3;
-  background-color: #000000;
+  color: #070707;
+  background-color: #b97fb8;
 }
 @media(max-width:767px){
   .footer-col{
@@ -431,4 +476,42 @@ padding: 0 15px;
 .view{
   text-decoration: none;
   color: #070707;
+}
+
+.service-text-h{
+  font-family: 'Yesteryear', cursive;
+  font-size: 50px;
+  font-weight: 500;
+  color: #b97fb8;
+  text-shadow: #972853;
+}
+.service-text-p{
+  font-size: 20px;
+}
+section{
+  background-color: #f5f5f5;
+}
+.faqs{
+  font-family:'Yesteryear', cursive;
+  color: #b97fb8;
+}
+.date .mbsc-button-icon .mbsc-ltr .mbsc-icon .mbsc-ios{
+  color: red;
+}
+.date .mbsc-calendar-cell-text .mbsc-calendar-day-text .mbsc-ios .mbsc-calendar-today{
+  background-color: #000000;
+}
+.person-img{
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border: 4px solid hsl(240, 1%, 26%);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+.my-therapy {
+  font-family: 'Yesteryear', cursive;
+  color: #b97fb8;
+  font-size: 40px;
 }

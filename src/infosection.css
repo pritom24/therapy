@@ -1,0 +1,9 @@
+  .single-blog{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+.blog-margin{
+    margin-bottom: 3rem;
+    border-bottom: 1px;
+}

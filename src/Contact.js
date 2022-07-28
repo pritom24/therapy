@@ -8,8 +8,8 @@ function Contact() {
  
   <section className='contact anim'>
     <div className='content'>
-        <h2>Contact Us</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, sit repellendus doloribus, odit voluptates corporis perspiciatis cupiditate aut assumenda, dolore facilis dolorum nihil deleniti. Reiciendis ipsum eius architecto impedit?</p>
+        <h2>Contact me now</h2>
+        
     </div>
     <div className='conteiner anim'>
       <div className='contactInfo'>
