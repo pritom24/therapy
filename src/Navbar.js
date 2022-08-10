@@ -33,12 +33,12 @@ function Navbar() {
                       </NavLink>
                     </li>
                     <li className="nav-item">
-                      <NavLink className="nav-link" to="/services">
+                      <NavLink className="nav-link" to="/Programs">
                         Programs
                       </NavLink>
                     </li>
                     <li className="nav-item">
-                      <NavLink className="nav-link" to="/about">
+                      <NavLink className="nav-link" to="/appointment">
                         Appoinment
                       </NavLink>
                     </li>

@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:ital,wght@1,900&family=Yesteryear&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Yesteryear&display=swap');
+@import url('https:/cdn.syncfusion.com/ej2/material.css');
 *{
   margin: 0;
   padding: 0;
@@ -183,22 +184,22 @@ label{
 .conteiner .contactInfo .box
 {
   position: relative;
-  padding: 20px 0;
+  /* padding: 20px 0; */
   display: flex;
   justify-content: center;
   align-items: center;
   
 }
 .conteiner .contactInfo .box .icon{
-  min-width: 60px;
-  height: 60px;
+  min-width: 50px;
+  height: 50px;
   display: flex;
   color: #fff;
   background: #b97fb8;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  font-size: 15px;
+  font-size: 10px;
 }
 .conteiner .contactInfo .box .text{
   display: flex;
@@ -209,7 +210,7 @@ label{
 .conteiner .contactInfo .box .text h3{
 font-weight: 500;
 color: #0a0808d3;
-padding-top: 0.5rem;
+padding-top: 2.2rem;
 }
 .contactForm{
   width: 40%;
@@ -514,4 +515,8 @@ section{
   font-family: 'Yesteryear', cursive;
   color: #b97fb8;
   font-size: 40px;
+}
+.sub-button {
+  background-color: #b97fb8 !important;
+  border-color: #b97fb8 !important
 }

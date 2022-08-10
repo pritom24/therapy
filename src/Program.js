@@ -2,7 +2,7 @@ import React from "react";
 import Card from "./Card";
 import Sdata from "./Sdata";
 
-function Services() {
+function Program() {
   return (
     <>
       <div className="my-5">
@@ -24,4 +24,4 @@ function Services() {
   );
 }
 
-export default Services;
+export default Program;

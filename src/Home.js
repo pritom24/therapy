@@ -5,7 +5,7 @@ import { IoArrowBack, IoArrowForward } from "react-icons/io5";
 import styled, { css } from "styled-components/macro";
 import "./home.css";
 import { Button } from "./Button";
-import Services from "./Services";
+import Services from "./Program";
 import Accordion from "./Accordion";
 import Contact from "./Contact";
 import InfoSection from "./InfoSection";

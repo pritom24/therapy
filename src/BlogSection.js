@@ -1,73 +1,63 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
+import axios from 'axios'
 import './blogcection.css'
 
+// axios.get('https://www.sadia.primex-bd.com/api/all-slider').then((res)=>{
+
+// console.log(res);
+// }).catch(function (error) {
+    
+//     console.log(error);
+//   })
+
 function BlogSection({heading, peragraphOne, reverse, image}) {
+	const [allBlog, setAllBlog] = useState([]);
+   
+
+	useEffect(() => {
+   axios.get('https://www.sadia.primex-bd.com/api/all-blogs').then(res=>{
+	  setAllBlog(res.data.data)
+	  console.log(res.data.data);
+   }).catch(err=>{
+	  console.log(err);
+   })
+	}, []);
     return (
       <>
+	 
   <div className="myrow-uneven">
 	<div className="mycol-left">
-		<div className="myrow">
-			<div className="mycol">
-				<header className="blog-header">
-					<h2>
-						Out and About
-					</h2>
-					<p>Best shops in town,<span className="date">&nbsp;April 2, 2018</span></p>
-				</header>
-				<img className='style-img' src="https://images.unsplash.com/photo-1517762340357-3a82e505f7c4?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=9814a4cd6efc15605f6a7a26acbf94e5&auto=format&fit=crop&w=2264&q=80"/>
-				<p><strong>In this post</strong> you'll find all the coolest, hippest and most skilled tattoo shops across the World.Sed mattis nunc id lorem euismod placerat...</p>
-				<div className="post-btm-bar">
-					<button className="likes"><i className="fas fa-thumbs-up"></i> Like</button>
-					<button className="replies">Replies <span className="count">26</span></button>
+		{
+			allBlog.map(value=>{
+				return <div className="myrow">
+				<div className="mycol">
+					<header className="blog-header">
+						<h2>
+							{value.title}
+						</h2>
+						<p>Created at<span className="date">&nbsp;{value.created_at}</span></p>
+					</header>
+					<img className='style-img' src={`https://www.sadia.primex-bd.com/assets/images/blogs/${value.photo}`}/>
+					<p><strong>In this post</strong>  {value.details}</p>
+					<div className="post-btm-bar">
+						<button className="likes"><i className="fas fa-thumbs-up"></i> Like</button>
+						<button className="replies">Replies <span className="count">42</span></button>
+					</div>
 				</div>
 			</div>
+			})
+		}
 		</div>
-
-		<div className="myrow">
-			<div className="mycol">
-				<header className="blog-header">
-					<h2>
-						Tattoos and Work
-					</h2>
-					<p>Stigmas attached to tattoos<span className="date">&nbsp;March 30, 2018</span></p>
-				</header>
-				<img className='style-img' src="https://images.unsplash.com/photo-1471880332732-86cdafcb1ff4?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=526158b2bdb24d5ce3ed2487c48df058&auto=format&fit=crop&w=2250&q=80"/>
-				<p><strong>In this post</strong> you'll find all the coolest, hippest and most skilled tattoo shops across the World.Sed mattis nunc id lorem euismod placerat...</p>
-				<div className="post-btm-bar">
-					<button className="likes"><i className="fas fa-thumbs-up"></i> Like</button>
-					<button className="replies">Replies <span className="count">42</span></button>
-				</div>
-			</div>
-		</div>
-
-		<div className="myrow">
-			<div className="mycol">
-				<header className="blog-header">
-					<h2>
-						Below the cuff
-					</h2>
-					<p>Are below the cuff tattoos good<span className="date">&nbsp;March 28, 2018</span></p>
-				</header>
-				<img className='style-img' src="https://images.unsplash.com/photo-1505545199769-29c6462bf3c6?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=93ea594822d2cdc900df5ab31cc12056&auto=format&fit=crop&w=2250&q=80"/>
-				<p><strong>In this post</strong> you'll find all the coolest, hippest and most skilled tattoo shops across the World. Sed mattis nunc id lorem euismod placerat...</p>
-				<div className="post-btm-bar">
-					<button className="likes"><i className="fas fa-thumbs-up"></i> Like</button>
-					<button className="replies">Replies <span className="count">120</span></button>
-				</div>
-			</div>
-		</div>
-
-	</div>
 
 	{/* <!-- SIDEBAR --> */}
 	<div className="mycol-right">
 		<section className="profile">
 			<div className="myrow author">
 				<div className="mycol author">
-					<img className='style-img' src="https://images.unsplash.com/photo-1500483849987-5a06418e3fb6?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=26677ec5806f174e68d5ac9714974986&auto=format&fit=crop&w=2250&q=80"/>
+					<img className='style-img' src={`https://www.sadia.primex-bd.com/assets/images/blogs/1656583989image-1.jpg`}/>
 					<div className="abt">
-						<h3 className="profile-title">Megan Moore</h3>
-						<p>Megan is a lifestyle blogger who loves to write about her passions of tattoos. </p>
+						<h3 className="profile-title">Latest Post</h3>
+						<p>চিকিৎসকদের মানসিক চাপ দিয়ে সেবা আদায় করা যায় না</p>
 					</div>
 				</div>
 			</div>
@@ -141,26 +131,16 @@ function BlogSection({heading, peragraphOne, reverse, image}) {
 			</header>
 			<div className="myrow">
 				<div className="mycol">
-					<span className="tag">Art</span>
-					<span className="tag">Food</span>
-					<span className="tag">Entertainment</span>
-					<span className="tag">Machines</span>
-					<span className="tag">Ink</span>
-					<span className="tag">Clothing</span>
-					<span className="tag">Weekends</span>
-					<span className="tag">Vacation Spots</span>
-					<span className="tag">Cars</span>
-					<span className="tag">Tattoos</span>
-					<span className="tag">Shops</span>
-					<span className="tag">Love</span>
-					<span className="tag">Ocean</span>
-					<span className="tag">Design</span>
-					<span className="tag">Development</span>
-					<span className="tag">UX/UI</span>
-					<span className="tag">Podcasts</span>
-					<span className="tag">Colors</span>
-					<span className="tag">Typography</span>
-					<span className="tag">Shoes</span>
+					<span className="tag">Medicine</span>
+					<span className="tag">Doctor</span>
+					<span className="tag">medical</span>
+					<span className="tag">health Care</span>
+					<span className="tag">hypnosis</span>
+					<span className="tag">hypnotherapy</span>
+					<span className="tag">Healing</span>
+					<span className="tag">Motivation</span>
+					<span className="tag">Confusion</span>
+					
 				</div>
 			</div>
 		</section>
@@ -170,7 +150,7 @@ function BlogSection({heading, peragraphOne, reverse, image}) {
 				<h2>Follow me</h2>
 			</header>
 			<div className="myrow">
-				<div className="mycol">
+				<div className="mycol my-2 ">
 					<a href="#"><i className="fab fa-facebook-f"></i></a>
 					<a href="#"><i className="fab fa-twitter"></i></a>
 					<a href="#"><i className="fab fa-pinterest"></i></a>

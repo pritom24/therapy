@@ -17,7 +17,7 @@ function Contact() {
             <div className='icon'> <FontAwesomeIcon icon={faLocationDot} /></div>
             <div className='text'>
               <h3>Address</h3>
-              <p>house number 91/c1, road number 7/a, <br /> dhanmondi , dhaka </p>
+              <p>43 firtree Avenue, Sale <br /> M33 5RQ, UK. </p>
             </div>
           </div>
         <div className='box'>
@@ -25,7 +25,8 @@ function Contact() {
               <div className='text'>
              
                 <h3>Phone</h3>
-                <p>01775970162</p>
+                <p > <a href="tel:+44 7944 946496">+44 7944 946496</a> 
+</p>
               </div>
           </div>
           <div className='box'>
@@ -33,7 +34,7 @@ function Contact() {
               <div className='text'>
             
                 <h3>Email</h3>
-                <p>pritomsaha24.ps@gmail.com</p>
+                <p> <a href="mail:sadia.hypnotherapy@gmail.com">sadia.hypnotherapy@gmail.com</a> </p>
               </div>
           </div>
       </div>

@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { IconContext } from 'react-icons';
 import { FiPlus, FiMinus } from 'react-icons/fi';
 
+
 const AccordionSection = styled.div`
   display: flex;
   flex-direction: column;
@@ -13,7 +14,39 @@ const AccordionSection = styled.div`
   height: 100vh;
   background: #fff;
 `;
-
+const ColumnLeft = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 10px;
+  line-height: 1.4;
+  padding: 1rem 2rem;
+  order: ${({ reverse }) => (reverse ? "2" : "1")} h1 {
+    margin-bottom: 1rem;
+    font-size: calc(1.5rem, 6vw, 2rem);
+  }
+  p {
+    margin-bottom: 2rem;
+  }
+`;
+const ColumnRight = styled.div`
+padding: 0rem 0rem;
+order: ${({ reverse }) => (reverse ? "1" : "2")};
+display: flex;
+justify-content: center;
+align-items: center;
+@media screen and (max-width:768px){
+    order: ${({ reverse }) => (reverse ? "2" : "1")};
+}
+img{
+width: 100%;
+height: 100%;
+object-fit: cover;
+@media screen and (max-width:768px){
+    width:90%;
+    height:90%
+}`;
 const Container = styled.div`
   position: absolute;
   top: 30%;
@@ -76,13 +109,13 @@ const Accordion = () => {
 
   return (
     <>
+    
     <div className='my-5'>
         <h1 className='text-center faqs'> Question about therapy</h1>
         <h5 className='text-center'>the most common question</h5>
         </div>
     <IconContext.Provider value={{ color: '#b97fb8', size: '25px' }}>
-      
-      <div className='container-fluid mb-5'>
+      <ColumnLeft><div className='container-fluid mb-5'>
       <div className='row'>
             <div className='col-10 mx-auto'>
               <div className='row gy-4'>
@@ -104,7 +137,9 @@ const Accordion = () => {
         </div>
         </div>
     </div>
-  </div>
+  </div></ColumnLeft>
+ 
+      
     </IconContext.Provider>
     </>
   );
