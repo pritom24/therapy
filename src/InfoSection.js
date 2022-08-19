@@ -4,6 +4,7 @@ import { Button } from "./Button";
 import { NavLink } from "react-router-dom";
 import axios from "axios";
 import "./infosection.css";
+import {Link} from 'react-router-dom'
 const Section = styled.div`
   width: 100%;
   height: 90%;
@@ -85,11 +86,14 @@ const InfoSection = ({ heading, peragraphOne, reverse, image }) => {
           <h3 className="text-center my-therapy"> Explore my therapy</h3>
             {
                 frontBlog.map((value)=>{
-                    return <div className="blog-margin">
-           
-            <img className="person-img" src={image} alt="" />
+                    return <div className="blog-margin ">
+           <div className="blog-section">
+             <img className="person-img" to={"/blogs"} src={`https://www.sadia.primex-bd.com/assets/images/blogs/${value.photo}`} alt="" />
             <h1>{value.title}</h1>
-            {/* <p>{value.details}</p> */}
+              
+           </div>
+           <p className="long-text"> {value.details} <br /></p>
+          
 
             <Button className="button" to={"/blogs"}>
               Read More

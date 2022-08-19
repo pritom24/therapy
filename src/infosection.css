@@ -4,6 +4,22 @@
       justify-content: center;
     }
 .blog-margin{
+    
     margin-bottom: 3rem;
     border-bottom: 1px;
+}
+.blog-section{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.blog-section h1{
+  margin-left: 3rem;
+}
+.long-text{
+
+  width: 60ch;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }

@@ -50,7 +50,8 @@ const Appoinment = () => {
 
   //   console.log(newData);
   // }
-  function saveAppointment() {
+  function saveAppointment(e) {
+    e.preventDefault();
     console.log({ name, email, phone, date });
     let data = { name, email, phone, date };
     fetch("https://www.site.asrafulhoque.com/set-appoint", {
@@ -61,7 +62,6 @@ const Appoinment = () => {
       },
       body: JSON.stringify(data),
     }).then((res) => {
-      res.preventDefault()
       console.log("result", res);
     });
   }
@@ -75,7 +75,7 @@ const Appoinment = () => {
           </h5>
         </div>
         <div className="modal-body">
-          <form onSubmit={saveAppointment} >
+          <form onSubmit={saveAppointment}>
             <div className="form-group">
               <label for="appointment_name" className="text-black">
                 Full Name

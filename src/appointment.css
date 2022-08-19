@@ -1,6 +1,6 @@
 .modal-content{
     position: relative;
-    
+    margin-top: 60px;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
